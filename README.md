@@ -2,10 +2,15 @@
 
 This is how to add custom header using Azure.AI 2.0.0 SDK with C#:
 
-First of all we should add new class that will inheritance `PipelinePolicy`. 
-`PipelinePolicy` is a type of `System.ClientModel.Primitives`, we will have to override some of its functions as below
+First of all we should add new class that will inheritance `PipelinePolicy`.
+
+`PipelinePolicy` is a type of `System.ClientModel.Primitives`, we will have to override some of its functions as below:
+
+
 
 ```
+using System.ClientModel.Primitives;
+
 public class CustomHeaderPolicy : PipelinePolicy
 {
     private readonly string _headerName;
